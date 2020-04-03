@@ -24,6 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="opacityPercent" value="80" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -51,6 +52,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="scalingPercent" value="0" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -73,7 +75,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="55" />
+                                                <entry key="scalingPercent" value="60" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -94,8 +96,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundImage" value="C:\Users\Anarbek\Downloads\Telegram Desktop\musei final1.png" />
-                                      <entry key="foregroundImage" value="C:\Users\Anarbek\Downloads\Telegram Desktop\musei final1.png" />
+                                      <entry key="backgroundImage" value="C:\Users\Anarbek\Downloads\Telegram Desktop\re1.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Anarbek\Downloads\Telegram Desktop\re1.png" />
+                                      <entry key="generateLegacyIcon" value="false" />
+                                      <entry key="legacyIconShape" value="NONE" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -117,6 +121,37 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                                <entry key="paddingPercent" value="-10" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="backgroundColor" value="c74fff" />
+                                      <entry key="cropped" value="true" />
+                                      <entry key="imageAsset" value="C:\Users\Anarbek\Downloads\Telegram Desktop\re1.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
