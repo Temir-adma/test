@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         tools:ignore="ExtraText"
-        tools:listitem="@layout/item_record" />
+        tools:listitem="@layout/record" />
 
 
 </FrameLayout>

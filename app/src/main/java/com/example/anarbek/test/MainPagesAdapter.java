@@ -1,44 +1,43 @@
 package com.example.anarbek.test;
 
-import android.os.Bundle;
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
-import android.view.View;
-
-import static com.example.anarbek.test.ItemListFragment.TYPE_EVENT;
-import static com.example.anarbek.test.ItemListFragment.TYPE_INFO;
-import static com.example.anarbek.test.ItemListFragment.TYPE_KEY;
+import android.util.Log;
 
 public class MainPagesAdapter extends FragmentPagerAdapter {
 
-    public MainPagesAdapter(FragmentManager fm) {
+    private static final int PAGE_INCOMES = 0;
+    private static final int PAGE_EXPENSES = 1;
+    private static final int PAGE_BALANCE = 2;
+
+    private String[] titles;
+
+    public MainPagesAdapter(FragmentManager fm, Context context) {
         super(fm);
+
+        titles = context.getResources().getStringArray(R.array.tab_title);
     }
 
     @Override
     public Fragment getItem(int position) {
-        if (position==0)
-        {
-            Fragment fragment= new ItemListFragment();
-            Bundle bundle=new Bundle();
-            bundle.putInt(TYPE_KEY,TYPE_EVENT);
+        Log.i("MainPagesAdapter", "getItem position = " + position);
 
-            fragment.setArguments(bundle);
-            return  fragment;
-        }
-        else if(position==1) {
-            Fragment fragment= new ItemListFragment();
-            Bundle bundle=new Bundle();
-            bundle.putInt(TYPE_KEY,TYPE_INFO);
+        switch (position) {
+            case PAGE_INCOMES:
+                return ItemsFragment.createItemsFragment(ItemsFragment.TYPE_INCOMES);
 
-            fragment.setArguments(bundle);
-            return  fragment;
+
+            case PAGE_EXPENSES:
+                return ItemsFragment.createItemsFragment(ItemsFragment.TYPE_EXPENSES);
+
+            case PAGE_BALANCE:
+                return null;
+
+            default:
+                return null;
         }
-        return null;
-        /*Fragment  fragment = new ItemListFragment();
-        return fragment;*/
     }
 
     @Override
@@ -48,17 +47,6 @@ public class MainPagesAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if (position==0)
-        {
-            return "Мероприятия";
-        }
-        else if(position==1) {
-            return "Объект";
-        }
-
-           return null;
-
-        }
-
-
+        return titles[position];
+    }
 }

@@ -1,12 +1,14 @@
 package com.example.anarbek.test;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 
-public class MainActivity<tabLayout> extends AppCompatActivity {
-    private ViewPager pager;
+public class MainActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
     private TabLayout tabLayout;
 
 
@@ -15,23 +17,25 @@ public class MainActivity<tabLayout> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pager=findViewById(R.id.viewPager);
-        tabLayout=findViewById(R.id.tabLayout);
-        MainPagesAdapter adapt= new MainPagesAdapter(getSupportFragmentManager());
-        pager.setAdapter(adapt);
+        viewPager = findViewById(R.id.viewPager);
+        tabLayout = findViewById(R.id.tabLayout);
 
+        MainPagesAdapter adapter = new MainPagesAdapter(getSupportFragmentManager(), this);
+        viewPager.setAdapter(adapter);
 
-        tabLayout.setupWithViewPager(pager);
-
+        tabLayout.setupWithViewPager(viewPager);
     }
+
 
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d("MainActivity", "onStart");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        Log.d("MainActivity", "onStop");
     }
 }

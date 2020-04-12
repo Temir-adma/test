@@ -75,7 +75,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="60" />
+                                                <entry key="scalingPercent" value="50" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -98,8 +98,7 @@
                                     <map>
                                       <entry key="backgroundImage" value="C:\Users\Anarbek\Downloads\Telegram Desktop\re1.png" />
                                       <entry key="foregroundImage" value="C:\Users\Anarbek\Downloads\Telegram Desktop\re1.png" />
-                                      <entry key="generateLegacyIcon" value="false" />
-                                      <entry key="legacyIconShape" value="NONE" />
+                                      <entry key="previewDensity" value="MEDIUM" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -151,6 +150,7 @@
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="c74fff" />
                                       <entry key="cropped" value="true" />
+                                      <entry key="iconShape" value="NONE" />
                                       <entry key="imageAsset" value="C:\Users\Anarbek\Downloads\Telegram Desktop\re1.png" />
                                     </map>
                                   </option>
